@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" role="img" aria-labelledby="title desc">
+  <title id="title">CarryX</title>
+  <desc id="desc">CarryX wordmark, white Carry text with a glowing green X on black.</desc>
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="500" fill="#000"/>
+  <text x="115" y="335" fill="#fff" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="250" letter-spacing="-16">Carry</text>
+  <text x="1015" y="335" fill="#32e76a" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="250" filter="url(#glow)">X</text>
+</svg>
