@@ -1,13 +1,13 @@
 # CarryX
 
 **Autonomous Follow-Me Robotic Bag**  
-Robotics · Computer Vision · Embedded Systems · Motor Control · Sensor Fusion · Web Control
+Robotics · Computer Vision · Embedded Systems · Motor Control · Sensor Fusion · Web Control · Mechanical CAD
 
 > **Jessica Builds — From a thought to reality through innovation.**
 
 CarryX is a mechatronics project exploring autonomous luggage that can detect and follow its owner while maintaining a safe distance and responding to obstacles.
 
-I was involved across the full project, including system architecture, sensing, embedded control, software integration, motor-control logic, prototyping, testing, interface development, hardware selection, and iterative engineering decisions.
+I was involved across the full project, including system architecture, sensing, embedded control, software integration, motor-control logic, prototyping, testing, interface development, hardware selection, mechanical CAD, and iterative engineering decisions.
 
 The project began with a UWB-based localization architecture and evolved through hands-on prototyping into a camera + ultrasonic implementation using a Raspberry Pi, Arduino Nano, OpenCV, serial communication, and differential-drive motor control.
 
@@ -21,6 +21,7 @@ A follow-me platform has to solve several problems at the same time:
 - stop safely when an obstacle is detected
 - coordinate sensing, high-level decision logic, and low-level motor actuation
 - provide a simple human interface to start, stop, and monitor the system
+- package electronics, drive components, and sensors into a mechanically usable platform
 
 The original design targeted indoor autonomous following with a suitcase-style mobile platform and separated high-level processing on a Raspberry Pi from real-time motor control on an Arduino.
 
@@ -49,6 +50,20 @@ The original design targeted indoor autonomous following with a suitcase-style m
 ```
 
 A lightweight Flask service adds a control/monitoring layer between the user interface and the embedded system.
+
+## Mechanical design / CAD
+
+CarryX also includes mechanical design work in AutoCAD. A base-plate drawing was created to define the physical foundation of the mobile platform and provide a structured mounting surface for the embedded electronics, battery/power hardware, motor-drive components, sensors, and drivetrain.
+
+The base plate is part of the chassis-level design problem: converting the electrical and software architecture into a physical robot with practical component placement, mounting points, cable routing, weight distribution, and space for later enclosure development.
+
+The original AutoCAD DWG is maintained as a project artifact and is intended to live in:
+
+```text
+cad/base-plate.dwg
+```
+
+Because the connected GitHub upload path does not support raw DWG binary writes, the drawing is documented here until the source file is added manually to that location.
 
 ## Prototype control pipeline
 
@@ -161,6 +176,11 @@ The camera/ultrasonic prototype represents an important engineering iteration: i
 
 ## Hardware / software stack
 
+**Mechanical design**
+- AutoCAD
+- base-plate / chassis design
+- component layout and mounting planning
+
 **Compute & embedded**
 - Raspberry Pi
 - Arduino Nano
@@ -199,7 +219,7 @@ That same loop appears throughout autonomous robots, industrial automation, dron
 
 ## Project status
 
-This repository documents the design, implementation, and prototype testing of CarryX. The project includes system architecture, camera-based target tracking, ultrasonic obstacle detection, Pi-to-Arduino communication, motor-control firmware, supervisory software, hardware integration, and iterative testing.
+This repository documents the design, implementation, and prototype testing of CarryX. The project includes system architecture, mechanical CAD, camera-based target tracking, ultrasonic obstacle detection, Pi-to-Arduino communication, motor-control firmware, supervisory software, hardware integration, and iterative testing.
 
 It should not be interpreted as a production-ready autonomous luggage product.
 
@@ -213,6 +233,7 @@ It should not be interpreted as a production-ready autonomous luggage product.
 - formalize lost-target recovery behavior
 - add battery telemetry and fault monitoring
 - characterize latency, range error, turn response, and stopping distance experimentally
+- refine chassis CAD around final component dimensions and enclosure constraints
 
 ---
 
