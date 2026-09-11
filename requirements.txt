@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pyserial
+flask
+flask-cors
+# Raspberry Pi environment packages:
+# picamera2
+# RPi.GPIO
