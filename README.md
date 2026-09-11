@@ -7,6 +7,8 @@ Robotics · Computer Vision · Embedded Systems · Motor Control · Sensor Fusio
 
 CarryX is a mechatronics project exploring autonomous luggage that can detect and follow its owner while maintaining a safe distance and responding to obstacles.
 
+I was involved across the full project, including system architecture, sensing, embedded control, software integration, motor-control logic, prototyping, testing, interface development, hardware selection, and iterative engineering decisions.
+
 The project began with a UWB-based localization architecture and evolved through hands-on prototyping into a camera + ultrasonic implementation using a Raspberry Pi, Arduino Nano, OpenCV, serial communication, and differential-drive motor control.
 
 ## The engineering problem
@@ -142,9 +144,9 @@ The uploaded CarryX V1.0 web interface connects to the Raspberry Pi service on p
 
 This creates a simple supervisory layer over the physical robot rather than requiring the operator to control it directly from a terminal.
 
-## Original UWB concept
+## Original UWB architecture
 
-The initial proposal used Decawave/DWM1000 Ultra-Wideband ranging with a wearable tag and multiple anchors. The proposed architecture separated:
+The initial design used Decawave/DWM1000 Ultra-Wideband ranging with a wearable tag and multiple anchors. The architecture separated:
 
 - UWB ranging and high-level localization on Raspberry Pi
 - Arduino-based motor control
@@ -197,7 +199,7 @@ That same loop appears throughout autonomous robots, industrial automation, dron
 
 ## Project status
 
-This repository documents an academic mechatronics project and its prototype software. The original proposal described the intended UWB architecture; the uploaded implementation demonstrates active development and testing of camera-based target tracking, ultrasonic obstacle detection, Pi-to-Arduino communication, motor-control firmware, and a supervisory web interface.
+This repository documents the design, implementation, and prototype testing of CarryX. The project includes system architecture, camera-based target tracking, ultrasonic obstacle detection, Pi-to-Arduino communication, motor-control firmware, supervisory software, hardware integration, and iterative testing.
 
 It should not be interpreted as a production-ready autonomous luggage product.
 
